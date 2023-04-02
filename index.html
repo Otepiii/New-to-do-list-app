@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet"
+          href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible"
           content="IE=edge">
@@ -14,6 +16,9 @@
           crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Document</title>
 </head>
 
@@ -27,9 +32,67 @@
                        name="task-name"
                        placeholder="e.g. Buy groceries"
                        autofocus>
+                <button type="submit">Add Task</button>
             </form>
         </div>
     </header>
+    <section>
+        <div class="container"
+             id="main-content">
+            <ul class="stats">
+                <li>
+                    <span>Remaining</span>
+                    <span class="remaining-tasks">0</span>
+                </li>
+                <li>
+                    <span>Completed</span>
+                    <span class="completed-tasks">0</span>
+                </li>
+                <li>
+                    <span>Total</span>
+                    <span class="total-tasks">0</span>
+                </li>
+            </ul>
+
+            <ul class="todos">
+                <li>
+                    <div>
+                        <input type="checkbox"
+                               name="tasks"
+                               id="1">
+                        <span>Task 1</span>
+                    </div>
+                    <button class="remove-task"
+                            title="Remove task">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <div>
+                        <input type="checkbox"
+                               name="tasks"
+                               id="2">
+                        <span>Task 2</span>
+                    </div>
+                    <button class="remove-task"
+                            title="Remove task">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><small>Design by <a href="https://josephevangelista.me">Joseph Evangelista</a>. Code by Joseph
+                    Evangelista.</small></p>
+        </div>
+    </footer>
 </body>
 
 </html>
