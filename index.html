@@ -18,81 +18,129 @@
           rel="stylesheet">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+          href="">
 
     <title>Document</title>
 </head>
 
 <body>
     <header id="main-header">
-        <div class="container">
-            <h1>Today</h1>
-            <form action=""
-                  id="todo-form">
-                <input type="text"
-                       name="task-name"
-                       placeholder="e.g. Buy groceries"
-                       autofocus>
-                <button type="submit">Add Task</button>
-            </form>
+        <div class="content">
+            <div class="left">.</div>
+            <div class="container">
+                <h1>Today</h1>
+                <div>
+                    <form action=""
+                          id="todo-form">
+                        <input type="text"
+                               name="task-name"
+                               placeholder="e.g Buy groceries"
+                               autofocus>
+                        <button type="submit">Add Task</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right">.</div>
         </div>
     </header>
-    <section>
-        <div class="container"
-             id="main-content">
-            <ul class="stats">
-                <li>
-                    <span>Remaining</span>
-                    <span class="remaining-tasks">0</span>
-                </li>
-                <li>
-                    <span>Completed</span>
-                    <span class="completed-tasks">0</span>
-                </li>
-                <li>
-                    <span>Total</span>
-                    <span class="total-tasks">0</span>
-                </li>
-            </ul>
+    <div class="main-container1">
+        <div class="main-container">
+            <div class="left-box"></div>
+            <div class="main-content">
+                <ul class="stats">
+                    <li>
+                        <span>Remaining <span class="remaining-tasks">0</span></span>
 
-            <ul class="todos">
-                <li>
-                    <div>
-                        <input type="checkbox"
-                               name="tasks"
-                               id="1">
-                        <span>Task 1</span>
-                    </div>
-                    <button class="remove-task"
-                            title="Remove task">
-                        <span class="material-symbols-outlined">
-                            close
-                        </span>
-                    </button>
-                </li>
-                <li>
-                    <div>
-                        <input type="checkbox"
-                               name="tasks"
-                               id="2">
-                        <span>Task 2</span>
-                    </div>
-                    <button class="remove-task"
-                            title="Remove task">
-                        <span class="material-symbols-outlined">
-                            close
-                        </span>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </section>
+                    </li>
+                    <li>
+                        <span>Completed<span class="completed-tasks">0</span></span>
 
-    <footer>
-        <div class="container">
-            <p><small>Design by <a href="https://josephevangelista.me">Joseph Evangelista</a>. Code by Joseph
-                    Evangelista.</small></p>
+                    </li>
+                    <li>
+                        <span>Total <span class="total-tasks">0</span></span>
+
+                    </li>
+                </ul>
+                <div>
+                    <ul class="todos">
+                        <li>
+                            <div>
+                                <input type="checkbox"
+                                       name="tasks"
+                                       id="1">
+                                <span>Task 1</span>
+                            </div>
+                            <button class="remove-task"
+                                    title="Remove task">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     class="icon icon-tabler icon-tabler-x"
+                                     width="24"
+                                     height="24"
+                                     viewBox="0 0 24 24"
+                                     stroke-width="2"
+                                     stroke="currentColor"
+                                     fill="none"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round">
+                                    <path stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"></path>
+                                    <path d="M18 6l-12 12"></path>
+                                    <path d="M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <div>
+                                <input type="checkbox"
+                                       name="tasks"
+                                       id="2">
+                                <span>Task 2</span>
+                            </div>
+                            <button class="remove-task"
+                                    title="Remove task">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     class="icon icon-tabler icon-tabler-x"
+                                     width="24"
+                                     height="24"
+                                     viewBox="0 0 24 24"
+                                     stroke-width="2"
+                                     stroke="currentColor"
+                                     fill="none"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round">
+                                    <path stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"></path>
+                                    <path d="M18 6l-12 12"></path>
+                                    <path d="M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <footer>
+                    <div class="container">
+                        <p><small>Design by <a href="https://josephevangelista.me">Joseph Evangelista</a>. Code by
+                                <a href="https://github.com/Otepiii">Joseph
+                                    Evangelista</a>.</small></p>
+                    </div>
+                </footer>
+            </div>
+            <div class="right-box"></div>
         </div>
-    </footer>
+
+
+
+    </div>
+
+
+    </div>
+
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>
