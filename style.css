@@ -229,17 +229,19 @@ input[type="checkbox"]:checked::before {
     color: #132A13;
 }
 
-.todos li button svg path{
+.todos li button {
     width: 1.25rem;
     height: 1.25rem;
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 .todos li button svg path{
     transition: var(--global-transition);
 }
-.todos li button svg:hover{
+.todos li button:hover {
     color: #90A955;
 }
-.todos li button:active svg path{
+.todos li button:active {
 transform: scale(.8);   
 }
 
