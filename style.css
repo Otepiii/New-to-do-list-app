@@ -53,6 +53,7 @@ color: #fff;
     display: flex;
     margin-top: 1.5rem;
     width: 114%;
+    flex-wrap: wrap;
 }
 
 .content .right{
@@ -181,6 +182,7 @@ header#main-header button {
 }
 
 input[type="checkbox"] {
+    color: var(--color-text);
     appearance: none;
     background-color: transparent;
     margin: 0;
