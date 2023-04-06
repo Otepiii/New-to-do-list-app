@@ -233,7 +233,7 @@ input[type="checkbox"]:checked::before {
     width: 1.25rem;
     height: 1.25rem;
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.2rem;    
 }
 .todos li button svg path{
     transition: var(--global-transition);
@@ -248,6 +248,8 @@ transform: scale(.8);
 .todos li span {
     border-radius: var(--global-border-radius);
     transition: var(--global-transition);
+    padding: .4rem;
+
 }
 
 .todos li span:hover {

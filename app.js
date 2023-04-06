@@ -48,6 +48,12 @@ todoList.addEventListener("click", (e) => {
 
 })
 
+todoList.addEventListener("input", (e) => {
+    const taskId = e.target.closest("li").id
+
+    updateTask(taskId, e.target)
+})
+
 
 function createTask(task) {
     const taskEl = document.createElement('li')
@@ -67,7 +73,7 @@ function createTask(task) {
                             </div>
                             <button class="remove-task"
                                     title="Remove the task "${task.name}" task">
-                                    &#10005
+                                    &#10006
                             </button>
     `
 
@@ -100,4 +106,8 @@ function removeTask(taskId) {
 
     countTasks()
     
+}
+
+function updateTask(taskId, el) {
+    const task = tasks.find((task))
 }
