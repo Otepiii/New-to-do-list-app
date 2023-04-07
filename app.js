@@ -48,6 +48,14 @@ todoList.addEventListener("click", (e) => {
 
 })
 
+todoList.addEventListener("keydown", e => {
+    if (e.keyCode === 13) {
+        e.preventDefault()
+        
+        e.target.blur()
+    }
+})
+
 todoList.addEventListener("input", (e) => {
     const taskId = e.target.closest("li").id
 
@@ -72,7 +80,7 @@ function createTask(task) {
                                 <span ${!task.isCompleted ? "contenteditable" : ""}>${task.name}</span>
                             </div>
                             <button class="remove-task"
-                                    title="Remove the task "${task.name}" task">
+                                    title="Remove the task "${task.name}" task" style="text-decoration:none">
                                     &#10006
                             </button>
     `
@@ -86,9 +94,9 @@ function createTask(task) {
 }
 
 function countTasks() {
-    const completedTasksArray = tasks.filter((task) => {
+    const completedTasksArray = tasks.filter((task) => 
         task.isCompleted === true
-    })
+    )
 
 
     totalTask.textContent = tasks.length 
@@ -109,5 +117,26 @@ function removeTask(taskId) {
 }
 
 function updateTask(taskId, el) {
-    const task = tasks.find((task))
+    const task = tasks.find((task) => task.id === parseInt(taskId))
+
+    if (el.hasAttribute("contenteditable")) {
+        task.name = el.textContent
+    } else {
+        const span = el.nextElementSibling
+        const parent = el.closest("li")
+
+        task.isCompleted = !task.isCompleted
+
+        if (task.isCompleted) {
+            span.removeAttribute("contenteditable")
+            parent.classList.add("complete")
+        } else {
+            span.setAttribute("contenteditable", "true")
+            parent.classList.remove("complete")
+        }
+    }
+
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+
+    countTasks()
 }

@@ -182,11 +182,17 @@ header#main-header button {
     gap: .75rem;
 }
 
-.todos li.complete {
-    background-color: var(--color-disabled);
-    text-decoration: line-through;
+.todos li.complete{
+    background-color: var(--color-muted);
+    /* text-decoration: line-through; */
     color: var(--color-text-disabled);
 }
+
+.todos li.complete span{
+        text-decoration: line-through;
+
+}
+
 
 input[type="checkbox"] {
     color: #132A13;
@@ -226,20 +232,26 @@ input[type="checkbox"]:checked::before {
     display: grid;
     place-content: center;
     background-color: transparent;
-    color: #132A13;
+    color: var(--color-text-badge);
 }
+
+.remove-task {
+    text-decoration: none !important;
+}
+
 
 .todos li button {
     width: 1.25rem;
     height: 1.25rem;
     font-weight: 800;
-    font-size: 1.2rem;    
+    font-size: 1.2rem;   
+    text-decoration: none !important; 
 }
 .todos li button svg path{
     transition: var(--global-transition);
 }
 .todos li button:hover {
-    color: #90A955;
+    color: var(--color-input-lighter);
 }
 .todos li button:active {
 transform: scale(.8);   
@@ -249,12 +261,14 @@ transform: scale(.8);
     border-radius: var(--global-border-radius);
     transition: var(--global-transition);
     padding: .4rem;
+    font-weight: 900;
 
 }
 
 .todos li span:hover {
-    background-color: var(--color-body);
+    background-color: var(--color-disabled);
     outline: none;
+    color: var(--color-muted);
 }
 
 .todos li span[contenteditable]:focus {
@@ -268,3 +282,5 @@ a {
 footer {
     margin-bottom: 1.8rem;
 }
+
+input, select { font-size: 100%; }
